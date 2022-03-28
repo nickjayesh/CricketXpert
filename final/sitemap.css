@@ -1,0 +1,88 @@
+body{
+	background-image: url(images/bcg1.jpg);
+	background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home{
+    fill:rgb(58, 58, 61);
+    stroke:rgb(59, 56, 57);
+    stroke-width:5;
+    opacity:0.75;
+    transition: 0.5s;
+}
+
+#homeG:hover text,#homeG:hover rect{
+    opacity:1;
+    cursor: pointer;
+}
+
+.firstdiv{
+    fill: #3c77e4;
+    opacity: .75;
+    transition: 0.5s;
+}
+
+.firstDivisionG:hover text, .firstDivisionG:hover rect{
+    opacity: 1;
+    cursor: pointer;
+}
+
+line{
+    stroke:white;
+    stroke-width:2
+}
+
+.pages:hover rect, .pages:hover text {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*fOOTER style */
+
+.footer {
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3c77e4;
+    left: 0px;
+    opacity: 0.9;
+    padding-top: 3px;
+    position: fixed;
+ }
+ 
+ #page-editor-img{ /*page Editor Img*/
+    width: 30px;
+    height: 30px;
+   margin-left: 30px;
+   float: left;
+    margin-top: 5px;
+ }
+ 
+ #editor-name{
+    margin-top: 10px;
+    float: right;
+    margin-right: 50px;
+    color: black;   
+}
+
+#editor{
+    background-color: #e4d43c;
+    height: 40px;
+    width: 200px;
+    clear: both;
+    margin:0  auto ;
+    border-radius: 20px;
+    margin-top: 5px;  
+ 
+}
+
+#editor:hover{
+    background-color: black;
+    
+}
+
+#editor:hover #editor-name{
+    color: white;
+}

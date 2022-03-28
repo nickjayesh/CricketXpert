@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Cricket - Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="Shop and cart style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- google fonts link -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- fontawesome link -->
+</head>
+
+<body>
+
+
+     
+    <!-- back to top bookmark -->
+	<div class='icons' id='page-top'>
+
+    <!-- floating shopping cart button -->
+    <div class="shopping-cart" onclick="location.href='cart.html';">
+        <img src="Pictures/cart final.png">
+        <span>0</span>
+    </div>
+
+    
+    <!-- shopping cart content -->
+    <div class='cart-content'>
+
+        <!-- go back to shop -->
+        <div class="back-container">
+            <div class="goback">
+                <a href="shopping Dhinuk.html"><i class="fas fa-arrow-left"></i>Go Back to Shop</a>
+            </div>
+        </div>
+        
+        <!-- products -->
+        <div class="cart-container">
+            <h2>CART DETAILS</h2>
+            <div class="cart-header">
+                <h4 class="cart-product-title">PRODUCT</h4>
+                <h4 class="cart-product-price">PRICE</h4>
+                <h4 class="cart-quantity">QUANTITY</h4>
+                <h4 class="cart-total">TOTAL</h4>
+            </div>
+            <div class="cart-products" id="cartProducts">
+            </div>
+        </div>
+
+        <!-- personal details -->
+        <div class="personal-details">
+            <h2>SHIPPING INFORMATION</h2>
+            <div class="cart-form-container">
+                <div class="error"></div>
+                <form class="cart-form" method="GET" id="cart-form">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname">
+                        </div>
+                        <div class="form-column">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="fname">Mobile Number</label>
+                            <input type="text" name="mnum" id="mnum">
+                        </div>
+                        <div class="form-column">
+                            <label for="lname">Email Address</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="fname">Address</label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <div class="form-column">
+                            <label for="lname">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="fname">Country</label>
+                            <input type="text" name="Country" id="country">
+                        </div>
+                        <div class="form-column">
+                            <label for="lname">Zip Code</label>
+                            <input type="text" name="zipcode" id="zipcode">
+                        </div>
+                    </div>
+
+                    <div class="cart-buttons">
+                        <button data-modal-target="#popup-modal" type="submit" onclick="return formValidation();"
+                            id="myBtn">Confirm Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- cart popup-modal -->
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Hello <span class="userName">n</span>, this is your order summary!</h1>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="summary-details">
+                        <h3>PERSONAL DETAILS</h3>
+                        <div class="modal-row">
+                            <div class="modal-column">
+                                <label for="fname">First Name</label>
+                                <span class="fname-span">FName</span>
+                            </div>
+                            <div class="modal-column">
+                                <label for="lname">Last Name</label>
+                                <span class="lname-span">LName</span>
+                            </div>
+                        </div>
+                        <div class="modal-row">
+                            <div class="modal-column">
+                                <label for="fname">Mobile Number</label>
+                                <span class="mnum-span">Mobile</span>
+                            </div>
+                            <div class="modal-column">
+                                <label for="lname">Email Address</label>
+                                <span class="email-span">EmailAddress</span>
+                            </div>
+                        </div>
+                        <div class="modal-row">
+                            <div class="modal-column">
+                                <label for="fname">Address</label>
+                                <span class="address-span">Address</span>
+                            </div>
+                            <div class="modal-column">
+                                <label for="lname">City</label>
+                                <span class="city-span">CityName</span>
+                            </div>
+                        </div>
+                        <div class="modal-row">
+                            <div class="modal-column">
+                                <label for="fname">Country</label>
+                                <span class="country-span">CountryName</span>
+                            </div>
+                            <div class="modal-column">
+                                <label for="lname">Zip Code</label>
+                                <span class="zip-span">ZipCode</span>
+                            </div>
+                        </div>
+                       	
+                        
+                    </div>
+                    <div class="summary-products">
+                        <h3>PRODUCT DETAILS</h3>
+                        <div class="modal-cart-products">
+                        </div>
+                    </div>
+                    <div class="cart-buttons">
+                        <button type="submit" onclick="return paymentDone();" id="doneBtn">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- payment-done modal -->
+    <div id="doneModal" class="done-modal">
+
+        <div class="done-content">
+            <img src="Pictures/done.png" alt="done">
+            <h2>Payment Successful!</h2>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="footer">
+        <a href="#page-top" id='top'> Page Top  </a>
+        <div class="footerText"><a href="Dhinuksharan Profile.html">Developed by Dhinuksharan Khanna</a></div>
+   </div>
+   
+    <script type="text/javascript" src="Shop script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="gallery.css">
+			<!--Google Fonts-->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="stylesheet.css">
+			<script src="gallery.js"></script>
+			<title>All cricket gallery</title>
+		</head>
+		<body id="body"> 
+			<div class='icons' id='page-top'><!-- back to top bookmark -->
+				<div class='yellow_div'></div>
+				<div class='icon'><img src="images/settings.png" alt="settings" style="height:80%;padding-top:5%;margin-left:5%" onclick="openSideBar()" id="sideBarView"></div>
+				<div class='icon'><img src="images/youtube.png" alt="youtube" style="height:83%;padding-top:6%;"></div>
+				<div class='icon'><img src="images/pinterest.png" alt="pinterest" style="height:68%;padding-top:7%;"></div>
+				<div class='icon'><img src="images/instagram.png" alt="instagram" style="height:80%;padding-top:7%;"></div>
+				<div class='icon'><img src="images/twitter.png" alt="twitter" style="height:90%;"></div>
+				<div class='icon'><img src="images/facebook.png" alt="facebook" style="height:90%;padding-top:5%;"></div>
+			</div>
+			<header> 
+					<div class="topnav">
+						<a class="logo" href="homePage.html">Cricket<span style="color:red;">X</span>pert</a>
+						<div class="topnav-right">
+							<a href="homePage.html">Home</a>
+							<a href="shopping Dhinuk.html">Shop</a>
+							<a class="active" href="gallery.html">Gallery</a>
+							<a href="QuizStart.html">Quiz</a>
+							<a href="sitemap.html">Site Map</a>
+							<a href="feedback.html">Feedback</a>
+							<a href="StudentDetails.html">About Us</a>
+						  <!-- change the class of the link in your page to "current-link" -->
+						</div>
+					</div>
+			</header>
+			<div id="sideBar">
+				<div id="sideBarHeading">
+					Visual Settings
+					<img src="images/delete-button.png" alt="close button" srcset="" id="closeButton" onclick="closeSideBar()"> 
+				</div>
+				<div id="sideBarTextSize">
+					Text Settings <br>
+					<div id="textSizeButtons">
+						<div class="sizeButtons" id="small" data-text-size="15px" onclick="setTextSize(this)">S</div>
+						<div class="sizeButtons" id="medium" data-text-size="17px" onclick="setTextSize(this)">M</div>
+						<div class="sizeButtons" id="large" data-text-size="19px" onclick="setTextSize(this)">L</div>
+						<div class="sizeButtons" id="extralarge" data-text-size="21px" onclick="setTextSize(this)">XL</div>
+					</div> 
+				</div>
+				<div id="sideBarTextColour">
+					Text Colour  <br> 
+					<div class="Tcolor" id="Tpink" data-text-colour="rgb(253, 117, 185)" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tred" data-text-colour="red" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tyellow" data-text-colour="yellow" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tjade" data-text-colour="rgb(74, 250, 182)" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tgreen" data-text-colour="rgb(0, 173, 0)" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Taqua" data-text-colour="aqua" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tblue" data-text-colour="rgb(39, 106, 252)" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Twhite" data-text-colour="white" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tgrey" data-text-colour="grey" onclick="setTextColour(this)"></div>
+					<div class="Tcolor" id="Tblack" data-text-colour="black" onclick="setTextColour(this)"></div>
+				</div>
+				<div id="sideBarBackgroundColour">
+					Background Colour  <br>
+					<div class="Bcolor" id="Bpink" data-background-colour="rgba(253, 117, 185, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bred" data-background-colour=" rgba(255, 0, 0, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Byellow" data-background-colour="rgba(255, 255, 0, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bjade" data-background-colour="rgba(74, 250, 182, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bgreen" data-background-colour="rgba(0, 173, 0, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Baqua" data-background-colour="rgba(0, 255, 255, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bblue" data-background-colour="rgb(39, 106, 252, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bwhite" data-background-colour="rgba(255, 255, 255, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bgrey" data-background-colour="rgba(128, 128, 128, 0.8)" onclick="setBackgroundColour(this)"></div>
+					<div class="Bcolor" id="Bblack" data-background-colour="rgba(0, 0, 0, 0.8)" onclick="setBackgroundColour(this)"></div>
+				</div>
+			</div>
+			<div id="slideShow">
+				<img src="images/800C1.jpg" alt="" srcset="" class="slideShow">
+				<div class="slideShowText">
+					All Cricket Gallery
+				</div>
+			</div>
+			<div id="line"></div>
+			<div id="gallery">
+				<div id="img1" class="thumbnail" onclick="img1()">
+					<img src="images/wcc1975.jpg" alt="" srcset="" class="ThumbnailImage">
+					<div class="thumbnailTitle">
+						FIRST ICC WORLD CUP 1975 <br> <br>
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+				<div id="img2" class="thumbnail" onclick="img2()">
+					<img src="images/mcc.jpg" alt="" srcset="" class="ThumbnailImage" >
+					<div class="thumbnailTitle">
+						Marylebone Cricket Club
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+				<div id="img3" class="thumbnail" onclick="img3()">
+					<img src="images/ipl.jpg" alt="" srcset="" class="ThumbnailImage" >
+					<div class="thumbnailTitle">
+						Indian Premier League
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+				<div id="img4" class="thumbnail" onclick="img4()">
+					<img src="images/Sanga.jpg" alt="" srcset="" class="ThumbnailImage" >
+					<div class="thumbnailTitle">
+						Kumar Sangakkara inducted to ICC Hall of Fame <br> <br>
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+				<div id="img5" class="thumbnail" onclick="img5()">
+					<img src="images/wcc2017.jpg" alt="" srcset="" class="ThumbnailImage" >
+					<div class="thumbnailTitle">
+						Women's World Cup 2019 
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+				<div id="img6" class="thumbnail" onclick="img6()">
+					<img src="images/wcc2019.jpg" alt="" srcset="" class="ThumbnailImage" >
+					<div class="thumbnailTitle">
+						Cricket World Cup 2019 <br> <br>
+						<div class="hiddenText">View Story >></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div id="editor">
+					 <a href="User-Profile-Kishorkaanth.html" > <img src="images/person_user_icon.png" alt="Page-editor" id="page-editor-img"><span id="editor-name">Page Editor</span></a>
+				</div>
+			</div>
+		</body>
+	</html>

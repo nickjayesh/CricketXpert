@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linking style sheet-->
+    <link rel="stylesheet" href="quiz.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Quiz Main</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a class="logo" href="homePage.html">Cricket<span style="color:red;"><b>X</b></span>pert</a>
+            <div class="topnav-right">
+                <a href="homePage.html">Home</a>
+                <a href="shopping Dhinuk.html">Shop</a>
+                <a href="gallery.html">Gallery</a>
+                <a class="active" href="QuizStart.html">Quiz</a>
+                <a href="sitemap.html">Site Map</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="StudentDetails.html">About Us</a>
+            </div>
+        </div>
+    </header>
+	<br><br><br>
+    <div class="quizMain">
+        <div class="quizHeader">
+            <h2 class="mainTitle">Quick Quiz</h2>
+            <div class="timer">
+                <div class="timerDesc">
+                    Time Left
+                </div>
+                <div id="timer">
+                </div>
+            </div>
+        </div>
+        <div id="Container1">
+            <form name="form" class="form">
+                <br><br><br>
+                <div class='question1' id="quesOne">
+                    <p class="question">1. Who has played most consecutive international matches?</p>
+      
+                    <ul class="option">
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q1" value="2" id="SachinTendulkar">
+                            <label for="SachinTendulkar" id="correctString1">Sachin Tendulkar</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q1" value="-1" id="InzamamUlHaq">
+                            <label for="InzamamUlHaq">Inzamam Ul Haq</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q1" value="-1" id="WasimAkram">
+                            <label for="WasimAkram">Wasim Akram</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q1" value="-1" id="KapilDev">
+                            <label for="KapilDev">Kapil Dev</label>
+                        </div>
+                    </ul>
+                </div>
+            
+                <div class='question2'>
+                    <p class="question">2. Who has played most consecutive world cup matches?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q2" value="-1" id="Sachin">
+                            <label for="Sachin">Sachin Tendulkar</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q2" value="2" id="Ricky">
+                            <label id="correctString2" for="Ricky">Ricky Ponting</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q2" value="-1" id="Kumar">
+                            <label for="Kumar">Kumar Sangakkara</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q2" value="-1" id="Glenn">
+                            <label for="Glenn">Glenn McGrath</label>
+                        </div>
+                    </ul>
+                </div>
+          
+                <div class='question3'>
+                    <p class="question">3. Which country is known as the father of cricket?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q3" value="2" id="England">
+                            <label id="correctString3" for="England">England</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q3" value="-1" id="Australia">
+                            <label  for="Australia">Australia</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q3" value="-1" id="SouthAfrica">
+                            <label for="SouthAfrica">South Africa</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q3" value="-1" id="WestIndies">
+                            <label for="WestIndies">West Indies</label>
+                        </div>
+                    </ul>
+                </div>
+         
+                <div class='question4'>
+                    <p class="question">4. What is the largest cricket stadium?</p>
+      
+                    <ul class="option">
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q4" value="-1" id="Melbourne">
+                            <label for="Melbourne">Melbourne Cricket Stadium</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q4" value="-1" id="Lords">
+                            <label for="Lords">Lords Cricket Stadium</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q4" value="2" id="Narendra">
+                            <label id="correctString4" for="Narendra">Narendra Modi Cricket Stadium</label>
+                        </div>
+                        <div class="answers">
+                            <input class="answer" type="radio" name="q4" value="-1" id="Johannesburg">
+                            <label for="Johannesburg">Johannesburg Cricket Stadium</label>
+                        </div>
+                    </ul>
+                </div>
+         
+                <div class='question5'>
+                    <p class="question">5. How long is a cricket pitch?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q5" value="2" id="22yards">
+                            <label id="correctString5" for="22yards">22 yards</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q5" value="-1" id="25yards">
+                            <label  for="25yards">25 yards</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q5" value="-1" id="28yards">
+                            <label for="28yards">28 yards</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q5" value="-1" id="18yards">
+                            <label for="18yards">18 yards</label>
+                        </div>
+                    </ul>
+                </div>
+             
+                <div class='question6'>
+                    <p class="question">6. Which of the following teams won the ICC Men's 50 Over World Cup consecutive times?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q6" value="-1" id="pakInd">
+                            <label for="pakInd">Pakistan , India</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q6" value="-1" id="ausInd">
+                            <label for="ausInd">Australia , India</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q6" value="-1" id="westPak">
+                            <label for="westPak">West Indies , Pakistan</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q6" value="2" id="westAus">
+                            <label id="correctString6" for="westAus">West Indies , Australia</label>
+                        </div>
+                    </ul>
+                </div>
+             
+                <div class='question7'>
+                    <p class="question">7. Who is the leading run scorer in Women's T20 cricket?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q7" value="2" id="Suzie">
+                            <label id="correctString7" for="Suzie">Suzie Bates</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q7" value="-1" id="Meg">
+                            <label for="Meg">Meg Lanning</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q7" value="-1" id="Charlotte">
+                            <label for="Charlotte">Charlotte Edwards</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q7" value="-1" id="Chamari">
+                            <label for="Chamari">Chamari Atapattu</label>
+                        </div>
+                    </ul>
+                </div>
+          
+                <div class='question8'>
+                    <p class="question">8. Who holds the record for the most number of wickets in test cricket?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q8" value="-1" id="q81">
+                            <label for="q81">James Anderson</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q8" value="2" id="Muttiah">
+                            <label id="correctString8" for="Muttiah">Muttiah Muralitharan</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q8" value="-1" id="Glenn">
+                            <label for="Glenn">Glenn McGrath</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q8" value="-1" id="Shane">
+                            <label for="Shane">Shane Warne</label>
+                        </div>
+                    </ul>
+                </div>
+        
+                <div class='question9'>
+                    <p class="question">9. Which country will host the 2023 cricket world cup?</p>
+
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q9" value="-1" id="eng">
+                            <label for="eng">England</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q9" value="2" id="ind">
+                            <label id="correctString9" for="ind">India</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q9" value="-1" id="newZe">
+                            <label for="newZe">New Zealand</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q9" value="-1" id="pak">
+                            <label for="pak">Pakistan</label>
+                        </div>
+                  </ul>
+                </div>
+        
+                <div class='question10'>
+                    <p class="question">10. Cricket World Cup 1996 was won by ______?</p>
+                    <ul class="option">
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q10" value="-1" id="engl">
+                            <label for="engl">England</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q10" value="-1" id="west">
+                            <label for="west">West Indies</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q10" value="-1" id="bang">
+                            <label for="bang">Bangladesh</label>
+                        </div>
+                        <div class="answers">
+                            <input type="radio" class="answer" name="q10" value="2" id="sri">
+                            <label id="correctString10" for="sri">Sri Lanka</label>
+                        </div>
+                    </ul>
+                </div>
+                <div class="submitter"><!--this.disable will make the form submit only once-->
+                    <input class="button" id="submitButton" onClick="submitQuiz();this.disabled = true;" type="button" value="Submit">
+                </div>
+                <br>
+                <a class="backTop" href="#quesOne">Back to the top</a>
+            </form>
+         
+        </div>
+    </div>
+    <div class="quizResult">
+        <!--show result-->
+        <div id="showAnswer" style="display: none;">
+            <div class="resultTitle">
+                <h3 id="resultText">You've completed the quiz!</h3>
+                <br><p>Your results</p>
+            </div>
+
+            <div class="quizAnswers" id="correctAnswer1"></div>
+            <div class="quizAnswers" id="correctAnswer2"></div>
+            <div class="quizAnswers" id="correctAnswer3"></div>
+            <div class="quizAnswers" id="correctAnswer4"></div>
+            <div class="quizAnswers" id="correctAnswer5"></div>
+            <div class="quizAnswers" id="correctAnswer6"></div>
+            <div class="quizAnswers" id="correctAnswer7"></div>
+            <div class="quizAnswers" id="correctAnswer8"></div>
+            <div class="quizAnswers" id="correctAnswer9"></div>
+            <div class="quizAnswers" id="correctAnswer10"></div>
+        
+            <!--show score -->
+            <div class="quizScore">
+                <h2 id="userScore"></h2>
+            </div>
+     
+      
+            <input type="button" value="Play Again" onclick="location.reload();" class="button" id="resetButton">
+            <!--refresh the page-->
+
+            <!--show quiz button-->
+            <input type="button" value="Show Answers" class="button" id="show">
+      
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

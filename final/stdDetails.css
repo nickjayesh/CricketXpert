@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html{
+	line-height:1.15;
+}
+body{
+    margin: 0;
+    padding: 0;
+	background-color:#ffffff;
+	font-family: 'Roboto', sans-serif;
+    background-image: url('quizbg.jpg');
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+h1{
+	padding: 0;
+    margin: 0 0 15px 0;
+}
+p{
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #454545;
+    font-weight: 300;
+}
+/*nav bar css*/
+.topnav {
+    background-color: #D4D7DE;
+    position:fixed;
+    width:100%;
+    z-index: 1;
+
+}
+  
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 18px 18px;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.topnav a:hover {
+    background-color: rgba(202, 201, 201, 0.733);
+    color: rgb(255, 255, 255);
+}
+  
+.topnav a.active {
+    background-color: #7267677a;
+    color: rgb(0, 0, 0);
+}
+.topnav .logo{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+  
+.topnav-right {
+    float: right;
+}
+/*classes*/
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titleSection{
+	text-align:center;
+	text-transform: uppercase;
+	font-size: 35px;
+}
+.teamDescription{
+	text-align:center;
+	font-size: 25px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.column{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.member{
+    margin-bottom:30px;
+	position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.member .member-img{
+	font-size: 0;
+    overflow: hidden;
+}
+.member .member-img img{
+    width: 320px;
+    height: 350px;
+	transition: all .3s;
+}
+.member:hover .member-img img{
+	transform:scale(1.2);
+}
+.member-desc p,h2{
+	font-size: 15px;
+}
+.member .member-desc{
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
+.member.member-desc .inner{
+	position: absolute;
+    padding: 15px;
+    z-index: 1;
+}
+.member .member-desc:before,
+.member .member-desc:after{
+	position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    content: '';
+}
+.member .member-desc:before{
+	border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    left: -100%;
+    top: 0;
+}
+.member .member-desc:after{
+	border-bottom: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    left: 100%;
+    bottom: 0;
+}
+.member:hover .member-desc{
+	opacity: 1;
+}
+.member:hover .member-desc:before,
+.member:hover .member-desc:after{
+	animation-delay: .1s;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.member .member-desc h2{
+	height: 60px;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.member .member-desc p{
+	color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+footer {
+    text-align:center;
+    font-size:15px;
+}
+footer a{
+    color:#7d807e;
+    padding:25px;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #000000;
+}
+/* Mobile Responsive */
+/*https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+    .column{
+        max-width: 50%;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .column{
+        max-width: 33.333333%;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+    .column{
+        max-width: 25%;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+   
+}

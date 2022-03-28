@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Presentation</title>
+    <style>
+  /*Loading Screen Start*/
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+.loader {
+  background-color: #7f7f83cb;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%,-50%); 
+  z-index: 20000;
+  top: 50%;
+  left: 50%;
+}
+.devnames {
+  margin: 400px 350px 50px 350px;
+  display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+	grid-column-gap: 75px;
+}
+
+.devnames span {
+	font-size:1.0em;
+  text-align: center;
+  color:#000000  ;
+}
+
+.devnames i {
+	padding: 5px;
+	color: #000000;
+}
+
+
+@keyframes pop {
+    50%  {
+    transform: scale(1.25);
+  }
+}
+.loader img {
+  position: absolute;
+  top: 30%;
+	left: 48%;
+	width: 100px;
+	transform: translate(-50%,-50%);
+	-webkit-animation: breathing 1.5s ease-out infinite normal;
+  animation: breathing 1.5s ease-out infinite normal;
+}
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes breathing {
+	0% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	25% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	60% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	100% {
+	  -webkit-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  }
+  
+  @keyframes breathing {
+	0% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	25% {
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	60% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  
+	100% {
+	  -webkit-transform: scale(0.8);
+	  -ms-transform: scale(0.8);
+	  transform: scale(0.8);
+	}
+  }
+/*Loading Screen End*/
+
+    </style>
+</head>
+<body>
+  <!-- loading page -->
+  <div class="website title">
+    <h1 class="h1-text">Cricket<span style="color:red;">X</span>pert</h1>
+    </div>
+  <div class="loader">
+    <div class="devnames">
+      <span><i class="fas fa-male"></i>Dhinuksharan Khanna</span>
+      <span><i class="fas fa-male"></i>Nikil Jayasuriya</span>
+      <span><i class="fas fa-male"></i>Sheran Perara</span>
+      <span><i class="fas fa-male"></i>Kishorkaanth Srikanthan</span>
+    </div>
+    <img src="Pictures/cricketicon.png">
+  </div>
+  <script>
+    setTimeout(function(){
+      window.location.href="homePage.html";
+    },5000);
+  </script>
+ 
+</body>
+</html>

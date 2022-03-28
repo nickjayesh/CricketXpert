@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* ---- CSS for the sidebar  ----  */
+#sideBar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color:white;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 20px;
+}
+#sideBarHeading{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color:#0d75d4;
+    padding:30px 30px;
+    margin-bottom: 50px;
+}
+#closeButton{
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+#closeButton:hover{
+    cursor: pointer;
+}
+
+#sideBarTextSize, #sideBarTextColour, #sideBarBackgroundColour {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-family: sans-serif;
+font-size: 18px;
+display: block;
+transition: 0.4s;
+width: 250px;
+overflow-x: hidden;
+}
+.sizeButtons{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 5px;
+    float: left;
+    height: 28px;
+    width: 28px;
+    border: rgb(165, 159, 159) solid 2px;
+    text-align: center;
+    padding: 6px 3px 0 3px;
+    transition: .2s;
+}
+.sizeButtons:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgb(179, 177, 177);
+}
+/* ---- Text and background colours  ----  */
+
+.Tcolor , .Bcolor{
+    height: 25px;
+    width: 25px;
+    margin: 5px 8px;
+    border: rgb(153, 151, 151) solid 1px;
+    border-radius: 100%;
+    float: left;
+    transition: .2s;
+}
+.Tcolor:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.Bcolor:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+#Tpink{
+    background-color: rgb(253, 117, 185);
+}
+#Tred{
+    background-color: red;
+}
+#Tyellow{
+    background-color: yellow;
+}
+#Tjade{
+    background-color: rgb(74, 250, 182);
+}
+#Tgreen{
+    background-color: rgb(0, 173, 0);
+}
+#Taqua{
+    background-color: aqua;
+}
+#Tblue{
+    background-color: rgb(39, 106, 252);
+}
+#Twhite{
+    background-color: white;
+}
+#Tgrey{
+    background-color: grey;
+}
+#Tblack{
+    background-color: black;
+}
+
+#Bpink{
+    background-color: rgba(253, 117, 185, 0.8);
+}
+#Bred{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+#Byellow{
+    background-color: rgba(255, 255, 0, 0.8);
+}
+#Bjade{
+    background-color: rgba(74, 250, 182, 0.8);
+}
+#Bgreen{
+    background-color: rgba(0, 173, 0, 0.8);
+}
+#Baqua{
+    background-color: rgba(0, 255, 255, 0.8);
+}
+#Bblue{
+    background-color: rgb(39, 106, 252, 0.8);
+}
+#Bwhite{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#Bgrey{
+    background-color: rgba(128, 128, 128, 0.8);
+}
+#Bblack{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#slideShow{
+    background-color: black;
+}
+.slideShow{
+    width: 100%;
+    height: auto;
+    opacity: .5;
+}
+.slideShowText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -80%);
+    font-size: 90px;
+    color: white;
+    font-family: fantasy;
+}
+#line{
+    width: 70%;
+    margin-left: 15%;
+    border-top: solid 5px #0d75d4;
+    position: relative;
+    bottom: 200px;
+}
+/* ---- CSS for the gallery  ----  */
+#gallery{
+    background-color: white;
+    width: 90%;
+    height: 900px;
+    margin-left: 5%;
+    border-top: solid 5px white;
+    position: relative;
+    bottom: 150px;
+    z-index: 2;
+}
+.thumbnail{
+    width: 30%;
+    height: 430px;
+    float: left;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    background-color: rgb(179, 173, 173);
+    transition: .5s;
+}
+.ThumbnailImage{
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+}
+.thumbnailTitle{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 19px;
+    transition: .5s;
+}
+.hiddenText{
+    visibility: hidden;
+    transition: .2s ;
+}
+.thumbnail:hover {
+    transform: scale(1.08);
+    position: relative;
+    z-index: 100;
+    opacity: 1;
+    background-color:  #0d75d4;
+    cursor: pointer;
+}
+.thumbnail:hover .thumbnailTitle {
+    transform: translateY(-35px);
+    background-color: #0d75d4;
+}
+.thumbnail:hover .hiddenText{
+    visibility: visible;
+    transform: translateY(10px);
+    background-color: wheat;
+}
+ /* CSS for the displayed image and description */
+
+#displayedImage{
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+}
+#description{
+    width: 40%;
+    float: left;
+    padding: 1% 5%;
+    font-size: 17px;    
+    height: 600px;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 60px;
+    font-size: 30px;
+}
+#backIcon{
+    font-family: 'Oswald', sans-serif;
+    background-color: grey;
+    font-size: 20px;
+    float: right;
+    padding: 5px 7px;
+    margin-top: 35px;
+    transition: .5s;
+    border-bottom: rgb(116, 115, 115) solid 3px;
+    border-right: rgb(116, 115, 115) solid 3px;
+}
+#backIcon:hover{
+    background-color: #D4AC0D;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/*fOOTER style */
+
+.footer {
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3c77e4;
+    left: 0px;
+    opacity: 0.9;
+    padding-top: 3px;
+    position: fixed;
+ }
+ 
+ #page-editor-img{ /*page Editor Img*/
+    width: 30px;
+    height: 30px;
+   margin-left: 30px;
+   float: left;
+    margin-top: 5px;
+ }
+ 
+ #editor-name{
+    margin-top: 10px;
+    float: right;
+    margin-right: 50px;
+    color: black;   
+}
+
+#editor{
+    background-color: #e4d43c;
+    height: 40px;
+    width: 200px;
+    clear: both;
+    margin:0  auto ;
+    border-radius: 20px;
+    margin-top: 5px;  
+ 
+}
+
+#editor:hover{
+    background-color: black;
+    
+}
+
+#editor:hover #editor-name{
+    color: white;
+}

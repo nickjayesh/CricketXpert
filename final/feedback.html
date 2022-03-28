@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <script>
+
+var x =document.getElementById("name1"); // taking the value of text field
+var y = document.getElementById("email1");// taking the value of email field
+function display(){
+
+if(name1.value.trim()=="") // validating that the name is not null
+  {
+    alert("Name must be filled out");  // alert if name is null
+    return false;
+  }else if (email1.value.trim()==""){ // validatin that the email is not null
+    alert("Email must be filled out");
+    return false;
+  }
+
+
+	document.getElementById('div1').style.display = 'none'; // hiding the form insid div1
+	document.getElementById("div2").style.display='block'; // displaying div2
+
+document.getElementById("demo").innerHTML="Name : "+name1.value; // printing values as the output
+document.getElementById("demo1").innerHTML="Email : "+email1.value;
+document.getElementById("demo2").innerHTML="Comment : "+txt1.value;
+
+}
+
+
+
+
+
+function reset(){
+    document.getElementById('form1').reset(); // funtion of resetting form data 
+
+    var z = document.getElementById('div2');
+  if (z.style.display === 'none') {
+    z.style.display = 'block';
+  } else {
+    z.style.display = 'none';
+  }
+
+  document.getElementById("div1").style.display='block'; // to display  div1 when user enter the edit button
+}
+
+
+
+function sub(){
+	alert("Your feedback uploaded");
+	document.getElementById('div2').style.display = 'none'; // function to hide div2
+}
+
+
+
+
+</script>
+
+   <link rel ="stylesheet" href="feedback.css"> <!--  linking css-->
+ 
+</head>
+<body>
+
+
+    <header> <!-- designing the nav bar  -->
+            <div class="topnav">
+                <a class="logo" href="#home"><b>Cricket<span style="color:red;">X</span>pert</b></a> <!-- logo design -->
+                <div class="topnav-right">
+                  <a href="homePage.html">Home</a>
+                  <a href="shopping Dhinuk.html">Shop</a>
+                  <a href="gallery.html">Gallery</a>
+                  <a href="QuizStart.html">Quiz</a>
+                  <a href="sitemap.html">Site Map</a>
+                  <a class="active" href="feedback.html">Feedback</a>
+                  <a href="StudentDetails.html">About Us</a>
+              </div>
+            </div>
+        </header>
+		
+	<br>
+	<br>
+	<br>
+
+
+
+<div>
+<div id ="div1"> <!-- division includes the form -->
+<h1> Feedback</h1>
+
+<fieldset id = "fieldset1">
+    <legend> Send Us Your feedback </legend> <!-- desining feedback form -->
+<form name = "form" method = "post" id = "form1" action=""  >
+    <label for = "name"> Name </label>
+    <input type = "text" name = "name " placeholder = "Enter Your first name" id = "name1"><br><br> <!-- text field name -->
+    <label for = "email">Email </label>
+    <input type = "email" name = "email " placeholder = "Enter Your email" id = "email1" ><br><br> <!-- text field email -->
+	<div id ="div3">
+	
+
+	<p> Your Comment</p>
+	<br><br><br><br>
+		<p> Rate Us </p>
+		</div>
+		<div id ="div4">
+	<textarea cols="5" rows="6" id = "txt1"> </textarea> <!-- text area to enter comment -->
+    <div class="rating"> <!-- radio buttons to rate us -->
+	
+        <input type="radio" class='radio' id="radio1" name="rating" value="Very satisfactory" /> <label for="radio1">  </label>
+        <input type="radio" class='radio' id="radio2" name="rating" value="satisfactory" /> <label for="radio2"> </label>
+        <input type="radio" class='radio' id="radio3" name="rating" value="Neutral" /> <label for="radio3"> </label>
+        <input type="radio" class='radio' id="radio4" name="rating" value="UnSatisfactory" /> <label for="radio4"> </label>
+        <input type="radio" class='radio' id="radio5" name="rating" value="Very UnSatisfactory" /> <label for="radio5"> </label>
+    </div><br><br>
+	</div>
+
+</form>
+    <button value = check  onclick="display()"> Check </button> <!-- check button -->
+
+</fieldset>
+
+
+
+</div>
+<div id ="div2" style="display:none" > <!-- division display the results -->
+<fieldset>
+	<legend>Feed back details </legend>
+    <p id="demo"></p> <!-- allocating spaces to display each input -->
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <button  type="reset" value = check id="demo4" onclick="reset()"> Edit </button><!-- edit button -->
+
+	<button value ="snd" onclick="sub()">Send</button> <!--send button  -->
+	</fieldset>
+</div>
+
+
+</div>
+<footer><a href='User-Profile-sheran.html' id='editor'>Developed by Sheran Perera</a></footer>
+
+
+</body>
+</html>
